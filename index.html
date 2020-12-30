@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Блин Блинский!</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ <div id="divBLIN">
+  <p><img src="https://i.ibb.co/Yf4BNhq/blinblinsky.png" alt="blinblinsky">
+ </div>
+
+ <div id="divSCRIPT">
+   <script language="JavaScript">
+
+function daysLeftNewYear()
+{
+ today = new Date()
+ //Можно установить любую дату
+ nextDate = new Date("January 1, 2021")
+ //Количество миллисекунд в одном дне
+ msPerDay = 24*60*60*1000;
+ //Высчитываем количество дней
+ daysLeft = Math.round((nextDate.getTime()
+  - today.getTime())/msPerDay);
+ dayname=""
+ ds=""+daysLeft
+  //Вырезаем последнею цифру
+ dd=parseInt(ds.substr(ds.length-1))
+ //Определяем правильность написания
+ if(daysLeft>4&&daysLeft<21)dayname=" дней"
+ else
+  if(dd==1)dayname=" день"
+  else
+   if(dd==2||dd==3||dd==4)dayname=" дня"
+   else dayname=" дней"
+ //Выводим надпись в документ
+ document.write("<br>"
+ +daysLeft+dayname);
+}
+    </script>
+
+    <script language="JavaScript">
+<!--
+//Вызываем функцию
+daysLeftNewYear()
+//-->
+    </script>
+  </div>
+
+</body>
+</html>
